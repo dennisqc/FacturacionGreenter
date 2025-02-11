@@ -23,8 +23,10 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class InvoiceController extends Controller
 {
-    public function send()
+    public function send(Request $request)
     {
+
+        $data = $request->all();
         $company = Company::where('user_id', JWTAuth::user()->id)->firstorFail();
         // return $company;
 
@@ -34,7 +36,7 @@ class InvoiceController extends Controller
         // $invoice->setDetails([$item])
         //     ->setLegends([$legend]);
 
-        $invoice = $sunat->getInvoice();
+        $invoice = $sunat->getInvoice($data);
         $result = $see->send($invoice);
 
         $response['xml'] = $see->getFactory()->getLastXml();
