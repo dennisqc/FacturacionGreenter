@@ -46,22 +46,22 @@ class SunatService
 
             //Mto Operaciones
             ->setMtoOperGravadas($data['mtoOperGravadas'] ?? null)
-            ->setMtoOperExoneradas($data['mtoOperExoneradas'] ?? null)
-            ->setMtoOperInafectas($data['mtoOperInafectas'] ?? null)
-            ->setMtoOperExportacion($data['mtoOperExportacion'] ?? null)
-            ->setMtoOperGratuitas($data['mtoOperGratuitas'] ?? null)
+            // ->setMtoOperExoneradas($data['mtoOperExoneradas'] ?? null)
+            // ->setMtoOperInafectas($data['mtoOperInafectas'] ?? null)
+            // ->setMtoOperExportacion($data['mtoOperExportacion'] ?? null)
+            // ->setMtoOperGratuitas($data['mtoOperGratuitas'] ?? null)
 
             //Impuestos
             ->setMtoIGV($data['mtoIGV'])
-            ->setMtoIGVGratuitas($data['mtoIGVGratuitas'])
-            ->setIcbper($data['icbper'])
+            // ->setMtoIGVGratuitas($data['mtoIGVGratuitas'])
+            // ->setIcbper($data['icbper'])
             ->setTotalImpuestos($data['totalImpuestos'])
 
             //Totales
             ->setValorVenta($data['valorVenta'])
             ->setSubTotal($data['subTotal'])
-            ->setRedondeo($data['redondeo'])
-            ->setMtoImpVenta($data['mtoImpVenta'])
+            // ->setRedondeo($data['redondeo'])
+             ->setMtoImpVenta($data['mtoImpVenta'])
 
             //Productos
             ->setDetails($this->getDetails($data['details']))
@@ -80,7 +80,7 @@ class SunatService
             ->setAddress($this->getAddress($company['address']) ?? null);
     }
 
-    public function getClient()
+    public function getClient($client)
     {
 
         // Cliente
@@ -94,7 +94,7 @@ class SunatService
     {
         // Emisor
         return (new Address())
-            ->setUbigueo($address['ubigueo'] ?? null)
+            ->setUbigueo($address['ubigeo'] ?? null)
             ->setDepartamento($address['departamento'] ?? null)
             ->setProvincia($address['provincia'] ?? null)
             ->setDistrito($address['distrito'] ?? null)
@@ -119,8 +119,8 @@ class SunatService
                 ->setMtoBaseIgv($detail['mtoBaseIgv'] ?? null)
                 ->setPorcentajeIgv($detail['porcentajeIgv'] ?? null) // 18%
                 ->setIgv($detail['igv'] ?? null)
-                ->setFactorIcbper($detail['factorIcbper'] ?? null) // 0.3%
-                ->setIcbper($detail['icbper'] ?? null)
+                // ->setFactorIcbper($detail['factorIcbper'] ?? null) // 0.3%
+                // ->setIcbper($detail['icbper'] ?? null)
                 ->setTipAfeIgv($detail['tipAfeIgv'] ?? null) // Gravado Op. Onerosa - Catalog. 07
                 ->setTotalImpuestos($detail['totalImpuestos'] ?? null) // Suma de impuestos en el detalle
                 ->setMtoValorVenta($detail['mtoValorVenta'] ?? null)

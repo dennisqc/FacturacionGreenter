@@ -27,6 +27,7 @@ class InvoiceController extends Controller
     {
 
         $data = $request->all();
+        // return $data;
         $company = Company::where('user_id', JWTAuth::user()->id)->firstorFail();
         // return $company;
 

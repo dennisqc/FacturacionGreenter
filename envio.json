@@ -1,0 +1,60 @@
+{
+    "ublVersion": "2.1",
+    "tipoOperacion": "0101",
+    "tipoDoc": "01",
+    "serie": "F001",
+    "correlativo": "3",
+    "fechaEmision": "2023-07-25T00:00:00-05:00",
+    "formaPago": {
+        "moneda": "PEN",
+        "tipo": "Contado"
+    },
+    "tipoMoneda": "PEN",
+    "company": {
+        "ruc": 20609278235,
+        "razonSocial": "Coders Free S.A.C",
+        "nombreComercial": "Coders Free",
+        "address": {
+            "ubigeo": "150101",
+            "departamento": "LIMA",
+            "provincia": "LIMA",
+            "distrito": "LIMA",
+            "urbanizacion": "-",
+            "direccion": "Av. Villa Nueva 221",
+            "codLocal": "0000"
+        }
+    },
+    "client": {
+        "tipoDoc": "6",
+        "numDoc": 20000000001,
+        "rznSocial": "EMPRESA X"
+    },
+    "mtoOperGravadas": 100,
+    "mtoIGV": 18,
+    "totalImpuestos": 18,
+    "valorVenta": 100,
+    "subTotal": 118,
+    "mtoImpVenta": 118,
+    "details": [
+        {
+            "tipAfeIgv": 10,
+            "codProducto": "P001",
+            "unidad": "NIU",
+            "descripcion": "PRODUCTO 1",
+            "cantidad": 2,
+            "mtoValorUnitario": 50,
+            "mtoValorVenta": 100,
+            "mtoBaseIgv": 100,
+            "porcentajeIgv": 18,
+            "igv": 18,
+            "totalImpuestos": 18,
+            "mtoPrecioUnitario": 59
+        }
+    ],
+    "legends": [
+        {
+            "code": "1000",
+            "value": "SON DOSCIENTOS TREINTA Y SEIS CON 00/100 SOLES"
+        }
+    ]
+}
